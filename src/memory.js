@@ -22,11 +22,15 @@ class MemoryGame {
 
 
   checkIfFinished() {
-
-    if (this.pairsGuessed === 12) {
-      setTimeout(() => { alert("Felicidades Ganaste!!!!") }, 500)
+    // ... write your code here
+    let totalPairs = this.cards.length / 2
+    console.log(totalPairs)
+    if (!this.pairsGuessed) {
+      return false
+    } if (this.pairsGuessed === totalPairs) {
       return true
-    } else { return false }
-
+    } else {
+      return false
+    }
   }
 }
